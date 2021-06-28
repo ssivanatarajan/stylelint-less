@@ -7,7 +7,7 @@
             "@babel/env"
         ]
     },
-    "main": "dist/index.js",
+    "main": "lib/index.js",
 
     "scripts": {
         "prebuild": "rimraf lib",
