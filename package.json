@@ -1,17 +1,17 @@
 {
     "name": "stylelint-less",
     "version": "1.0.0",
-    "description": "",
+    "description": "A collection of Less specific rules for stylelint",
     "babel": {
         "presets": [
             "@babel/env"
         ]
     },
-    "main": "index.js",
+    "main": "dist/index.js",
 
     "scripts": {
-        "prebuild": "rimraf dist",
-        "build": "babel src --out-dir dist"
+        "prebuild": "rimraf lib",
+        "build": "babel src --out-dir lib"
     },
 
     "dependencies": {
@@ -41,5 +41,11 @@
     "license": "MIT",
     "env": {
         "es6": true
-    }
+    },
+    "keywords": [
+        "stylelint",
+        "stylelint-plugin",
+        "css",
+        "less"
+    ]
 }
