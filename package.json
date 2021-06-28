@@ -1,0 +1,45 @@
+{
+    "name": "stylelint-less",
+    "version": "1.0.0",
+    "description": "",
+    "babel": {
+        "presets": [
+            "@babel/env"
+        ]
+    },
+    "main": "index.js",
+
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "babel src --out-dir dist"
+    },
+
+    "dependencies": {
+        "stylelint": "^13.8.0",
+        "postcss": "^6.0.22",
+        "postcss-value-parser": "4.1.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.6",
+        "@babel/preset-env": "^7.9.6",
+        "babel-plugin-istanbul": "^6.0.0",
+        "babel-preset-jest": "^25.5.0"
+    },
+    "author": {
+        "name": "Sivantarajan",
+        "url": "https://github.com/ssivanatarajan/"
+    },
+    "bugs": {
+        "url": "https://github.com/ssivanatarajan/stylelint-less/issues"
+    },
+    "homepage": "https://github.com/ssivanatarajan/stylelint-less#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ssivanatarajan/stylelint-less.git"
+    },
+    "license": "MIT",
+    "env": {
+        "es6": true
+    }
+}
