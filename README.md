@@ -19,10 +19,6 @@ Create a config for stylelint and add  `stylelint-less` to the plugins array and
     "stylelint-less"
   ],
   "rules": {
-     "declaration-colon-space-after": "always",
-     "declaration-colon-space-before": "never",
-     //Due to some limiations in postcss-less parser , above rules are mandatory, so that stylelint-less  will work as expected
-  
     "at-rule-no-unknown": null,
     color-invalid-hex:"true",
     "less/color-invalid-hex":true
