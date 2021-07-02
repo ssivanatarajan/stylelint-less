@@ -30,6 +30,7 @@ Please refer to [stylelint](https://stylelint.io/user-guide/get-started/) docs f
 
 ## List of Rules
 
+- color-hex-case
 - color-no-hex
 - color-no-invalid-hex
 - no-duplicate-variables
