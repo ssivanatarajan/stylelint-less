@@ -7,7 +7,6 @@
  */
 
 export default function isValidVariable(atRule) {
-    debugger;
     if ('variable' in atRule && atRule.raws.afterName.includes(":")) {
         return true;
     }

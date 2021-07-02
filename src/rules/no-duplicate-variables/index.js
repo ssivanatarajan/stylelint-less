@@ -22,10 +22,8 @@ export default function(actual, options) {
         }
         var globalVariables = [];
         root.walkRules((rule) => {
-            debugger;
             var variables = [];
             rule.nodes.forEach(function(node) {
-                debugger;
                 if (node.type == "atrule") {
                     if (!isValidVariable(node)) {
                         stylelint.utils.report({

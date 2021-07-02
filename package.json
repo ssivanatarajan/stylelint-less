@@ -8,16 +8,14 @@
         ]
     },
     "main": "lib/index.js",
-
     "scripts": {
         "prebuild": "rimraf lib",
         "build": "babel src --out-dir lib"
     },
-
     "dependencies": {
-        "stylelint": "^13.8.0",
         "postcss": "^6.0.22",
-        "postcss-value-parser": "4.1.0"
+        "postcss-value-parser": "4.1.0",
+        "stylelint": "^13.8.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.4",
