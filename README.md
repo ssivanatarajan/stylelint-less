@@ -35,8 +35,19 @@ Please refer to [stylelint](https://stylelint.io/user-guide/get-started/) docs f
 - color-no-invalid-hex
 - no-duplicate-variables
 
-Use these variables with `less` namespace ex
+Use these rules with `less` namespace example
 
 ``` less/color-no-hex: "true" ```
+
+## Note
+
+Please make sure there is 
+  - No space between variable and ':'
+  - A space between ":" and value
+  example
+  ``
+    @color: red;
+  ``
+  so that these rules will work as expected. If the variable is not in the above format , you will get ` Invalid variable ` error.
 
 
