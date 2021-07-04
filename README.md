@@ -48,6 +48,7 @@ Please make sure there is
   ``
     @color: red;
   ``
+  
   so that these rules will work as expected. If the variable is not in the above format , you will get ` Invalid variable ` error.
 
 
