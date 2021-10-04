@@ -20,8 +20,8 @@ Create a config for stylelint and add  `stylelint-less` to the plugins array and
   ],
   "rules": {
     "at-rule-no-unknown": null,
-    color-invalid-hex:"true",
-    "less/color-invalid-hex":true
+    "color-no-invalid-hex":"true",
+    "less/color-no-invalid-hex":true
   }
 }
 ```
