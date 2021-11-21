@@ -11,7 +11,8 @@ First install Stylelint-less and stylelint (if it is not instlled already)
 npm install stylelint stylelint-less
 ```
 
-Create a config for stylelint and add  `stylelint-less` to the plugins array and the rules you need to the rules list. All rules from stylelint-scss need to be namespaced with `less`.
+Create a config for stylelint and add  `stylelint-less` to the plugins array and the rules you need to the rules list. All rules from stylelint-less
+need to be namespaced with `less`.
 
 ```
 {
