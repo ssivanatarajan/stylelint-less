@@ -7,7 +7,7 @@
  */
 
 export default function isValidVariable(atRule) {
-    if ('variable' in atRule && atRule.raws.afterName.includes(":")) {
+    if ('variable' in atRule && atRule.raws.afterName.includes(":") || atRule.mixin) {
         return true;
     }
     return false;
