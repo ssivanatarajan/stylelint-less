@@ -25,27 +25,29 @@ export default function(actual, options) {
             var variables = [];
             rule.nodes.forEach(function(node) {
                 if (node.type == "atrule") {
-                    if (!isValidVariable(node)) {
-                        stylelint.utils.report({
-                            result,
-                            ruleName,
-                            message: messages.invalid(node.name),
-                            node: node,
-                            word: node.name
-
-                        });
-                    } else {
-                        if (variables.includes(node.name)) {
+                    if(!isStandardSyntaxAtRule(node)){
+                        if (!isValidVariable(node)) {
                             stylelint.utils.report({
                                 result,
                                 ruleName,
-                                message: messages.rejected(node.name),
+                                message: messages.invalid(node.name),
                                 node: node,
                                 word: node.name
 
                             });
                         } else {
-                            variables.push(node.name);
+                            if (variables.includes(node.name)) {
+                                stylelint.utils.report({
+                                    result,
+                                    ruleName,
+                                    message: messages.rejected(node.name),
+                                    node: node,
+                                    word: node.name
+
+                                });
+                            } else {
+                                variables.push(node.name);
+                            }
                         }
                     }
                 }
