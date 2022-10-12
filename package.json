@@ -1,5 +1,5 @@
 {
-    "name": "stylelint-less",
+    "name": "dnd-stylelint-less",
     "version": "1.0.5",
     "description": "A collection of Less specific rules for stylelint",
     "babel": {
