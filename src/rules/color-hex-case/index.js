@@ -5,7 +5,6 @@ import { namespace } from "../../utils";
 import valueParser from 'postcss-value-parser';
 var validateOptions = require('stylelint/lib/utils/validateOptions');
 var postcss = require('postcss');
-var isLessv = require("stylelint/lib/utils/isLessVariable");
 export const ruleName = namespace("color-hex-case");
 export const messages = stylelint.utils.ruleMessages(ruleName, {
     rejected: function(actual, expected) {
@@ -31,7 +30,6 @@ export default function(expectation, options, context) {
         }
         root.walkAtRules(function(node) {
             var node = postcss.atRule(node);
-            var r = isLessv(node);
             if (!isStandardSyntaxAtRule(node)) {
                 if (!isValidVariable(node)) {
                     stylelint.utils.report({
