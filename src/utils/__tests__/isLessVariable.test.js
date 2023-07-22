@@ -1,7 +1,5 @@
-'use strict';
-
-const isLessVariable = require('../isLessVariable');
-const less = require('postcss-less');
+import isLessVariable from '../isLessVariable';
+import less from 'postcss-less';
 
 describe('isLessVariable', () => {
 	it('is less variable', () => {
@@ -31,8 +29,6 @@ describe('isLessVariable', () => {
 
 function lessAtRule(css) {
 	const atRules = [];
-
 	less.parse(css).walkAtRules((atRule) => atRules.push(atRule));
-
 	return atRules[0];
 }
