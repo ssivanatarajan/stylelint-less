@@ -1,6 +1,5 @@
 import stylelint from 'stylelint';
 import isStandardSyntaxAtRule from 'stylelint/lib/utils/isStandardSyntaxAtRule';
-import validateOptions from 'stylelint/lib/utils/validateOptions';
 import valueParser from 'postcss-value-parser';
 import { isHexColor, isIgnoredFunction, isValidVariable, namespace } from '../../utils';
 
@@ -17,11 +16,12 @@ export const messages = stylelint.utils.ruleMessages(ruleName, {
 
 export default function (actual) {
 	return function (root, result) {
-		const validOptions = validateOptions(result, ruleName, { actual });
+		const validOptions = stylelint.utils.validateOptions(result, ruleName, { actual });
 
 		if (!validOptions) {
 			return;
 		}
+
 		root.walkAtRules(function (node) {
 			if (!isStandardSyntaxAtRule(node)) {
 				if (!isValidVariable(node)) {

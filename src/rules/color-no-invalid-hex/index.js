@@ -1,9 +1,8 @@
 import stylelint from 'stylelint';
 import isStandardSyntaxAtRule from 'stylelint/lib/utils/isStandardSyntaxAtRule';
-import { isValidVariable, namespace } from '../../utils';
-import valueParser from 'postcss-value-parser';
 import isValidHex from 'stylelint/lib/utils/isValidHex';
-import validateOptions from 'stylelint/lib/utils/validateOptions';
+import valueParser from 'postcss-value-parser';
+import { isValidVariable, namespace } from '../../utils';
 
 export const ruleName = namespace('color-no-invalid-hex');
 
@@ -18,11 +17,12 @@ export const messages = stylelint.utils.ruleMessages(ruleName, {
 
 export default function (actual) {
 	return function (root, result) {
-		const validOptions = validateOptions(result, ruleName, { actual });
+		const validOptions = stylelint.utils.validateOptions(result, ruleName, { actual });
 
 		if (!validOptions) {
 			return;
 		}
+
 		root.walkAtRules(function (node) {
 			if (!isStandardSyntaxAtRule(node)) {
 				if (!isValidVariable(node)) {
