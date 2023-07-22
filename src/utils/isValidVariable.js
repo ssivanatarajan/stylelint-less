@@ -1,7 +1,7 @@
 /**
  * Check whether the atrule is valid less variable.
  *
- * @param {node} atRule
+ * @param {import('postcss').AtRule} atRule
  * @returns {boolean}
  */
 export default function isValidVariable(atRule) {
